@@ -420,34 +420,6 @@ void playCurrentNote()
 {
  //IMPLEMENTED
  //Serial.println(analogRead(A0));
-  offsetFrequency = getPhotoFrequency();
-//   if (countNotes <= MAX_NOTES) { // if less than 16 notes have been played
-//     // output sound
-//     if (analogRead(NOTE_IN_PIN) > 205 && analogRead(NOTE_IN_PIN) < 230) { // allow range of values for button press
-//       tone(BUZZER_PIN, NOTE_C4 + offsetFrequency, 100);
-//       activeFrequency = NOTE_C4 + offsetFrequency;
-//       delay(100); // delay to slow down incrementation
-//     } else if (analogRead(NOTE_IN_PIN) > 305 && analogRead(NOTE_IN_PIN) < 315) {
-//       tone(BUZZER_PIN, NOTE_D4 + offsetFrequency, 100);
-//       activeFrequency = NOTE_D4 + offsetFrequency;
-//       delay(100);  
-//     } else if (analogRead(NOTE_IN_PIN) > 320 && analogRead(NOTE_IN_PIN) < 400) {
-//       tone(BUZZER_PIN, NOTE_E4 + offsetFrequency, 100);
-//       activeFrequency = NOTE_E4 + offsetFrequency;
-//       delay(100);
-//     } else if (analogRead(NOTE_IN_PIN) > 500 && analogRead(NOTE_IN_PIN) < 622) {
-//       tone(BUZZER_PIN, NOTE_F4 + offsetFrequency, 100);
-//       activeFrequency = NOTE_F4 + offsetFrequency;
-//       delay(100);
-//     } else if (analogRead(NOTE_IN_PIN) > 650 && analogRead(NOTE_IN_PIN) < 685) {
-//       tone(BUZZER_PIN, NOTE_G4 + offsetFrequency, 100);
-//       activeFrequency = NOTE_G4 + offsetFrequency;
-//       delay(100);
-//    }
-//  } //else if (countNotes < MAX_NOTES) {
-//    countNotes = 0;
-//    }
-
     tone(BUZZER_PIN, analogRead(A0), 100);
     delay(100);
     Serial.println(countNotes);
